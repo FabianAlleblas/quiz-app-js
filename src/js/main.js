@@ -9,34 +9,40 @@ const bookmarkContent = document.querySelector('[data-js=bookmark-content]')
 const createContent = document.querySelector('[data-js=create-content]')
 const profileContent = document.querySelector('[data-js=profile-content]')
 // NAV-ICONS
-const questionIcon = document.querySelector('[data-js=question-icon]')
-const bookmarkIcon = document.querySelector('[data-js=bookmark-icon-nav]')
-const createIcon = document.querySelector('[data-js=create-icon]')
-const profileIcon = document.querySelector('[data-js=profile-icon]')
+const questionNavIcon = document.querySelector('[data-js=question-navicon]')
+const bookmarkNavIcon = document.querySelector('[data-js=bookmark-navicon]')
+const createNavIcon = document.querySelector('[data-js=create-navicon]')
+const profileNavIcon = document.querySelector('[data-js=profile-navicon]')
+// CARD-BOOKMARK-ICON
+const bookmarkCardIcon = document.querySelector('[data-js=bookmark-cardicon]')
 // EVENT-LISTENER
-questionIcon.addEventListener('click', () => {
+questionNavIcon.addEventListener('click', () => {
   hideAllPages()
   showContent(questionContent, questionHeading)
-  activateIcon(questionIcon)
+  activateIcon(questionNavIcon)
 })
 
-bookmarkIcon.addEventListener('click', () => {
+bookmarkNavIcon.addEventListener('click', () => {
   hideAllPages()
   showContent(bookmarkContent, bookmarkHeading)
-  activateIcon(bookmarkIcon)
+  activateIcon(bookmarkNavIcon)
 })
 
-createIcon.addEventListener('click', () => {
+createNavIcon.addEventListener('click', () => {
   hideAllPages()
   showContent(createContent, createHeading)
-  activateIcon(createIcon)
+  activateIcon(createNavIcon)
 })
 
-profileIcon.addEventListener('click', () => {
+profileNavIcon.addEventListener('click', () => {
   hideAllPages()
   showContent(profileContent, profileHeading)
-  activateIcon(profileIcon)
+  activateIcon(profileNavIcon)
 })
+
+bookmarkCardIcon.addEventListener('click', () =>
+  bookmarkCardIcon.classList.toggle('card__bookmark-icon--active')
+)
 // FUNCTIONS
 function hideAllPages() {
   console.log('Hello')
@@ -48,10 +54,10 @@ function hideAllPages() {
   bookmarkContent.classList.add('hidden')
   createContent.classList.add('hidden')
   profileContent.classList.add('hidden')
-  questionIcon.classList.remove('navigation__icon--active')
-  bookmarkIcon.classList.remove('navigation__icon--active')
-  createIcon.classList.remove('navigation__icon--active')
-  profileIcon.classList.remove('navigation__icon--active')
+  questionNavIcon.classList.remove('navigation__icon--active')
+  bookmarkNavIcon.classList.remove('navigation__icon--active')
+  createNavIcon.classList.remove('navigation__icon--active')
+  profileNavIcon.classList.remove('navigation__icon--active')
 }
 
 function showContent(content, heading) {
