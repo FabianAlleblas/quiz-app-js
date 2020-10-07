@@ -15,11 +15,11 @@ const createNavIcon = document.querySelector('[data-js=create-navicon]')
 const profileNavIcon = document.querySelector('[data-js=profile-navicon]')
 // CARD-BOOKMARK-ICON
 const bookmarkCardIcon = document.querySelector('[data-js=bookmark-cardicon]')
-// FORM
-const firstInput = document.querySelector('[name="textarea1"]')
-const secondInput = document.querySelector('[name="textarea2"]')
-const tagsInput = document.querySelector('[name="tags-input"]')
-const resetButton = document.querySelector('[class="button"]')
+// FORM-BUTTON
+const resetButton = document.querySelector('[data-js=reset-btn]')
+// ANSWER-TOGGLE-BUTTON
+const toggleButton = document.querySelector('[data-js=toggle-btn]')
+const answerCard = document.querySelector('[data-js=answer-card]')
 // EVENT-LISTENER
 questionNavIcon.addEventListener('click', () => {
   hideAllPages()
@@ -48,9 +48,16 @@ profileNavIcon.addEventListener('click', () => {
 bookmarkCardIcon.addEventListener('click', () =>
   bookmarkCardIcon.classList.toggle('card__bookmark-icon--active')
 )
+
+resetButton.addEventListener('click', () =>
+  document.querySelector('.form').reset()
+)
+
+toggleButton.addEventListener('click', () =>
+  answerCard.classList.toggle('hidden')
+)
 // FUNCTIONS
 function hideAllPages() {
-  console.log('Hello')
   questionHeading.classList.add('hidden')
   bookmarkHeading.classList.add('hidden')
   createHeading.classList.add('hidden')
@@ -66,12 +73,10 @@ function hideAllPages() {
 }
 
 function showContent(content, heading) {
-  console.log('content')
   content.classList.remove('hidden')
   heading.classList.remove('hidden')
 }
 
 function activateIcon(icon) {
-  console.log('icon')
   icon.classList.add('navigation__icon--active')
 }
