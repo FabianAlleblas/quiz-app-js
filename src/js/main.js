@@ -23,25 +23,25 @@ const answerCard = document.querySelector('[data-js=answer-card]')
 // EVENT-LISTENER
 questionNavIcon.addEventListener('click', () => {
   hideAllPages()
-  showContent(questionContent, questionHeading)
+  showContent(questionHeading, questionContent)
   activateIcon(questionNavIcon)
 })
 
 bookmarkNavIcon.addEventListener('click', () => {
   hideAllPages()
-  showContent(bookmarkContent, bookmarkHeading)
+  showContent(bookmarkHeading, bookmarkContent)
   activateIcon(bookmarkNavIcon)
 })
 
 createNavIcon.addEventListener('click', () => {
   hideAllPages()
-  showContent(createContent, createHeading)
+  showContent(createHeading, createContent)
   activateIcon(createNavIcon)
 })
 
 profileNavIcon.addEventListener('click', () => {
   hideAllPages()
-  showContent(profileContent, profileHeading)
+  showContent(profileHeading, profileContent)
   activateIcon(profileNavIcon)
 })
 
@@ -72,9 +72,9 @@ function hideAllPages() {
   profileNavIcon.classList.remove('navigation__icon--active')
 }
 
-function showContent(content, heading) {
-  content.classList.remove('hidden')
+function showContent(heading, content) {
   heading.classList.remove('hidden')
+  content.classList.remove('hidden')
 }
 
 function activateIcon(icon) {
