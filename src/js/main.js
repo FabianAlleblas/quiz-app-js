@@ -73,7 +73,7 @@ function hideAllPages() {
 }
 
 function showContent(heading, content) {
-  heading..classList.remove('hidden')
+  heading.classList.remove('hidden')
   content.classList.remove('hidden')
 }
 
