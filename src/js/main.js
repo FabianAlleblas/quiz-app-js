@@ -15,6 +15,11 @@ const createNavIcon = document.querySelector('[data-js=create-navicon]')
 const profileNavIcon = document.querySelector('[data-js=profile-navicon]')
 // CARD-BOOKMARK-ICON
 const bookmarkCardIcon = document.querySelector('[data-js=bookmark-cardicon]')
+// FORM
+const firstInput = document.querySelector('[name="textarea1"]')
+const secondInput = document.querySelector('[name="textarea2"]')
+const tagsInput = document.querySelector('[name="tags-input"]')
+const resetButton = document.querySelector('[class="button"]')
 // EVENT-LISTENER
 questionNavIcon.addEventListener('click', () => {
   hideAllPages()
