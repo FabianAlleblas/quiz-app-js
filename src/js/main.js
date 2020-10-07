@@ -17,7 +17,7 @@ const profileNavIcon = document.querySelector('[data-js=profile-navicon]')
 const bookmarkCardIcon = document.querySelector('[data-js=bookmark-cardicon]')
 // FORM-BUTTON
 const resetButton = document.querySelector('[data-js=reset-btn]')
-// ANSWER-TOGGLE-BUTTON
+// ANSWER-TOGGLE
 const toggleButton = document.querySelector('[data-js=toggle-btn]')
 const answerCard = document.querySelector('[data-js=answer-card]')
 // EVENT-LISTENER
