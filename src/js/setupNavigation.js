@@ -10,7 +10,7 @@ export default function setupNavigation() {
   }
 
   function updateNavigation(event) {
-    const clickedLink = event.target
+    const clickedLink = event.currentTarget
     const targetPageName = clickedLink.dataset.name
 
     pages.forEach((page) => {
@@ -18,12 +18,13 @@ export default function setupNavigation() {
       page.classList.toggle('hidden', pageName !== targetPageName)
     })
 
-    headings.forEach((page) => {
-      const pageName = page.dataset.name
-      page.classList.toggle('hidden', pageName !== targetPageName)
+    headings.forEach((heading) => {
+      const headingName = heading.dataset.name
+      heading.classList.toggle('hidden', headingName !== targetPageName)
     })
 
     navLinks.forEach((navLink) => {
+      // const navName = navLink.dataset.name
       navLink.classList.toggle(
         'navigation__icon--active',
         navLink === clickedLink
