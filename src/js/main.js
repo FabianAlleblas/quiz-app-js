@@ -1,27 +1,29 @@
+// IMPORTS
+import { getDataName } from './lib'
 //HEADINGS
-const questionHeading = document.querySelector('[data-js=question-heading]')
-const bookmarkHeading = document.querySelector('[data-js=bookmark-heading]')
-const createHeading = document.querySelector('[data-js=create-heading]')
-const profileHeading = document.querySelector('[data-js=profile-heading]')
+const questionHeading = getDataName('question-heading')
+const bookmarkHeading = getDataName('bookmark-heading')
+const createHeading = getDataName('create-heading')
+const profileHeading = getDataName('profile-heading')
 //CONTENTBOX
-const questionContent = document.querySelector('[data-js=question-content]')
-const bookmarkContent = document.querySelector('[data-js=bookmark-content]')
-const createContent = document.querySelector('[data-js=create-content]')
-const profileContent = document.querySelector('[data-js=profile-content]')
+const questionContent = getDataName('question-content')
+const bookmarkContent = getDataName('bookmark-content')
+const createContent = getDataName('create-content')
+const profileContent = getDataName('profile-content')
 // NAV-ICONS
-const questionNavIcon = document.querySelector('[data-js=question-navicon]')
-const bookmarkNavIcon = document.querySelector('[data-js=bookmark-navicon]')
-const createNavIcon = document.querySelector('[data-js=create-navicon]')
-const profileNavIcon = document.querySelector('[data-js=profile-navicon]')
+const questionNavIcon = getDataName('question-nav-icon')
+const bookmarkNavIcon = getDataName('bookmark-nav-icon')
+const createNavIcon = getDataName('create-nav-icon')
+const profileNavIcon = getDataName('profile-nav-icon')
 // CARD-BOOKMARK-ICON
 const bookmarkCardIcon = document.querySelectorAll(
-  '[data-js=bookmark-cardicon]'
+  '[data-name=bookmark-card-icon]'
 )
 // FORM-BUTTON
-const resetButton = document.querySelector('[data-js=reset-btn]')
+const resetButton = getDataName('reset-btn')
 // ANSWER-TOGGLE
-const toggleButton = document.querySelector('[data-js=toggle-btn]')
-const answerCard = document.querySelector('[data-js=answer-card]')
+const toggleButton = getDataName('toggle-btn')
+const answerCard = getDataName('answer-card')
 // EVENT-LISTENER
 questionNavIcon.addEventListener('click', () => {
   hideAllPages()
@@ -65,6 +67,7 @@ toggleButton.addEventListener('click', () =>
   answerCard.classList.toggle('hidden')
 )
 // FUNCTIONS
+
 function hideAllPages() {
   questionHeading.classList.add('hidden')
   bookmarkHeading.classList.add('hidden')
@@ -88,3 +91,30 @@ function showContent(heading, content) {
 function activateIcon(icon) {
   icon.classList.add('navigation__icon--active')
 }
+
+// console.clear()
+
+// const pages = document.querySelectorAll('[data-js="pages"] > *')
+// const navLinks = document.querySelectorAll('[data-js="nav"] > *')
+
+// navLinks.forEach(addNavigationLogic)
+
+// function addNavigationLogic(navLink) {
+//   navLink.addEventListener('click', updateNavigation)
+// }
+
+// function updateNavigation(event) {
+//   event.preventDefault()
+
+//   const clickedLink = event.target
+//   const targetPageName = clickedLink.dataset.name
+
+//   pages.forEach(page => {
+//      const pageName = page.dataset.name
+//      page.classList.toggle('hidden', pageName !== targetPageName)
+//   })
+
+//   navLinks.forEach(navLink => {
+//     navLink.classList.toggle('active', navLink === clickedLink)
+//   })
+// }

@@ -9,16 +9,18 @@
   </head>
   <body>
     <header class="header center">
-      <h1 data-js="question-heading" class="header__title">Quiz-App</h1>
-      <h1 data-js="bookmark-heading" class="header__title hidden">Bookmarks</h1>
-      <h1 data-js="create-heading" class="header__title hidden">Create</h1>
-      <h1 data-js="profile-heading" class="header__title hidden">Profile</h1>
+      <h1 data-name="question-heading" class="header__title">Quiz-App</h1>
+      <h1 data-name="bookmark-heading" class="header__title hidden">
+        Bookmarks
+      </h1>
+      <h1 data-name="create-heading" class="header__title hidden">Create</h1>
+      <h1 data-name="profile-heading" class="header__title hidden">Profile</h1>
     </header>
-    <main data-js="question-content" class="main-grid--1column">
+    <main data-name="question-content" class="main-grid--1column">
       <section class="card">
         <h2 class="card__title">Question:</h2>
         <svg
-          data-js="bookmark-cardicon"
+          data-name="bookmark-card-icon"
           class="card__bookmark-icon"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -31,8 +33,8 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
-        <button data-js="toggle-btn" class="button">Show Answer</button>
-        <p data-js="answer-card" class="card__text hidden">
+        <button data-name="toggle-btn" class="button">Show Answer</button>
+        <p data-name="answer-card" class="card__text hidden">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
@@ -46,7 +48,7 @@
       <section class="card">
         <h2 class="card__title">Question:</h2>
         <svg
-          data-js="bookmark-cardicon"
+          data-name="bookmark-card-icon"
           class="card__bookmark-icon card__bookmark-icon--active"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -74,7 +76,7 @@
       <section class="card">
         <h2 class="card__title">Question:</h2>
         <svg
-          data-js="bookmark-cardicon"
+          data-name="bookmark-card-icon"
           class="card__bookmark-icon"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -102,7 +104,7 @@
       <section class="card">
         <h2 class="card__title">Question:</h2>
         <svg
-          data-js="bookmark-cardicon"
+          data-name="bookmark-card-icon"
           class="card__bookmark-icon"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -128,11 +130,11 @@
         </ul>
       </section>
     </main>
-    <main data-js="bookmark-content" class="main-grid--1column hidden">
+    <main data-name="bookmark-content" class="main-grid--1column hidden">
       <section class="card">
         <h2 class="card__title">Question:</h2>
         <svg
-          data-js="bookmark-cardicon"
+          data-name="bookmark-card-icon"
           class="card__bookmark-icon card__bookmark-icon--active"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -160,7 +162,7 @@
       <section class="card">
         <h2 class="card__title">Question:</h2>
         <svg
-          data-js="bookmark-cardicon"
+          data-name="bookmark-card-icon"
           class="card__bookmark-icon card__bookmark-icon--active"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -186,7 +188,7 @@
         </ul>
       </section>
     </main>
-    <main data-js="create-content" class="main-grid--1column hidden">
+    <main data-name="create-content" class="main-grid--1column hidden">
       <form class="form" action="">
         <label for="textarea1"
           >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
@@ -226,10 +228,12 @@
           required
         />
 
-        <button data-js="reset-btn" class="button" type="button">Submit</button>
+        <button data-name="reset-btn" class="button" type="button">
+          Submit
+        </button>
       </form>
     </main>
-    <main data-js="profile-content" class="main-grid--2columns hidden">
+    <main data-name="profile-content" class="main-grid--2columns hidden">
       <img
         class="profile-picture"
         src="images/profile-picture.png"
@@ -253,10 +257,9 @@
       </ul>
       <button class="button grid-span">Logout</button>
     </main>
-
     <footer class="navigation">
       <svg
-        data-js="question-navicon"
+        data-name="question-nav-icon"
         class="navigation__icon navigation__icon--active"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -264,7 +267,7 @@
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
       </svg>
       <svg
-        data-js="bookmark-navicon"
+        data-name="bookmark-nav-icon"
         class="navigation__icon"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -272,7 +275,7 @@
         <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z" />
       </svg>
       <svg
-        data-js="create-navicon"
+        data-name="create-nav-icon"
         class="navigation__icon"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -282,7 +285,7 @@
         />
       </svg>
       <svg
-        data-js="profile-navicon"
+        data-name="profile-nav-icon"
         class="navigation__icon"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
