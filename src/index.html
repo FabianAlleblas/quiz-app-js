@@ -8,16 +8,14 @@
     <script defer src="js/main.js"></script>
   </head>
   <body>
-    <header class="header center">
-      <h1 data-name="question-heading" class="header__title">Quiz-App</h1>
-      <h1 data-name="bookmark-heading" class="header__title hidden">
-        Bookmarks
-      </h1>
-      <h1 data-name="create-heading" class="header__title hidden">Create</h1>
-      <h1 data-name="profile-heading" class="header__title hidden">Profile</h1>
+    <header data-name="heading" class="header center">
+      <h1 data-name="question" class="header__title">Quiz-App</h1>
+      <h1 data-name="bookmark" class="header__title hidden">Bookmarks</h1>
+      <h1 data-name="create" class="header__title hidden">Create</h1>
+      <h1 data-name="profile" class="header__title hidden">Profile</h1>
     </header>
-    <main data-name="question-content" class="main-grid--1column">
-      <section class="card">
+    <main data-js="content" data-name="question" class="main-grid--1column">
+      <section data-name="card" class="card">
         <h2 class="card__title">Question:</h2>
         <svg
           data-name="bookmark-card-icon"
@@ -130,7 +128,11 @@
         </ul>
       </section>
     </main>
-    <main data-name="bookmark-content" class="main-grid--1column hidden">
+    <main
+      data-js="content"
+      data-name="bookmark"
+      class="main-grid--1column hidden"
+    >
       <section class="card">
         <h2 class="card__title">Question:</h2>
         <svg
@@ -188,7 +190,11 @@
         </ul>
       </section>
     </main>
-    <main data-name="create-content" class="main-grid--1column hidden">
+    <main
+      data-js="content"
+      data-name="create"
+      class="main-grid--1column hidden"
+    >
       <form class="form" action="">
         <label for="textarea1"
           >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
@@ -233,7 +239,11 @@
         </button>
       </form>
     </main>
-    <main data-name="profile-content" class="main-grid--2columns hidden">
+    <main
+      data-js="content"
+      data-name="profile"
+      class="main-grid--2columns hidden"
+    >
       <img
         class="profile-picture"
         src="images/profile-picture.png"
@@ -257,9 +267,9 @@
       </ul>
       <button class="button grid-span">Logout</button>
     </main>
-    <footer class="navigation">
+    <footer data-name="navigation" class="navigation">
       <svg
-        data-name="question-nav-icon"
+        data-name="question"
         class="navigation__icon navigation__icon--active"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -267,7 +277,7 @@
         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
       </svg>
       <svg
-        data-name="bookmark-nav-icon"
+        data-name="bookmark"
         class="navigation__icon"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -275,7 +285,7 @@
         <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z" />
       </svg>
       <svg
-        data-name="create-nav-icon"
+        data-name="create"
         class="navigation__icon"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -285,7 +295,7 @@
         />
       </svg>
       <svg
-        data-name="profile-nav-icon"
+        data-name="profile"
         class="navigation__icon"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
