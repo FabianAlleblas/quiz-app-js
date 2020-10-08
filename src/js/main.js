@@ -1,7 +1,7 @@
-// IMPORTS
-import { getDataName, getAllDataName } from './lib'
 import setupNavigation from './setupNavigation'
 import setupCards from './setupCards'
+import setupForm from './setupForm'
 
 setupNavigation()
 setupCards()
+setupForm()

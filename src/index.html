@@ -43,35 +43,7 @@
           <li class="tag-list__item">BEM</li>
         </ul>
       </section>
-      <section class="card">
-        <h2 class="card__title">Question:</h2>
-        <svg
-          data-name="bookmark-card-icon"
-          class="card__bookmark-icon card__bookmark-icon--active"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-        >
-          <path
-            d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"
-          />
-        </svg>
-        <p class="card__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem non, architecto commodi quod id asper?
-        </p>
-        <button class="button">Show Answer</button>
-        <p class="card__text hidden">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Exercitationem non, architecto commodi quod id asper?
-        </p>
-        <ul class="tag-list">
-          <li class="tag-list__item">CSS</li>
-          <li class="tag-list__item">HTML</li>
-          <li class="tag-list__item">Position</li>
-          <li class="tag-list__item">BEM</li>
-        </ul>
-      </section>
-      <section class="card">
+      <section data-name="card" class="card">
         <h2 class="card__title">Question:</h2>
         <svg
           data-name="bookmark-card-icon"
@@ -87,8 +59,8 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
-        <button class="button">Show Answer</button>
-        <p class="card__text hidden">
+        <button data-name="toggle-btn" class="button">Show Answer</button>
+        <p data-name="answer-card" class="card__text hidden">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
@@ -99,7 +71,7 @@
           <li class="tag-list__item">BEM</li>
         </ul>
       </section>
-      <section class="card">
+      <section data-name="card" class="card">
         <h2 class="card__title">Question:</h2>
         <svg
           data-name="bookmark-card-icon"
@@ -115,8 +87,36 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
-        <button class="button">Show Answer</button>
-        <p class="card__text hidden">
+        <button data-name="toggle-btn" class="button">Show Answer</button>
+        <p data-name="answer-card" class="card__text hidden">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem non, architecto commodi quod id asper?
+        </p>
+        <ul class="tag-list">
+          <li class="tag-list__item">CSS</li>
+          <li class="tag-list__item">HTML</li>
+          <li class="tag-list__item">Position</li>
+          <li class="tag-list__item">BEM</li>
+        </ul>
+      </section>
+      <section data-name="card" class="card">
+        <h2 class="card__title">Question:</h2>
+        <svg
+          data-name="bookmark-card-icon"
+          class="card__bookmark-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2z"
+          />
+        </svg>
+        <p class="card__text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Exercitationem non, architecto commodi quod id asper?
+        </p>
+        <button data-name="toggle-btn" class="button">Show Answer</button>
+        <p data-name="answer-card" class="card__text hidden">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
@@ -133,11 +133,11 @@
       data-name="bookmark"
       class="main-grid--1column hidden"
     >
-      <section class="card">
+      <section data-name="card" class="card">
         <h2 class="card__title">Question:</h2>
         <svg
           data-name="bookmark-card-icon"
-          class="card__bookmark-icon card__bookmark-icon--active"
+          class="card__bookmark-icon"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -149,8 +149,8 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
-        <button class="button">Show Answer</button>
-        <p class="card__text hidden">
+        <button data-name="toggle-btn" class="button">Show Answer</button>
+        <p data-name="answer-card" class="card__text hidden">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
@@ -161,11 +161,11 @@
           <li class="tag-list__item">BEM</li>
         </ul>
       </section>
-      <section class="card">
+      <section data-name="card" class="card">
         <h2 class="card__title">Question:</h2>
         <svg
           data-name="bookmark-card-icon"
-          class="card__bookmark-icon card__bookmark-icon--active"
+          class="card__bookmark-icon"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -177,8 +177,8 @@
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
-        <button class="button">Show Answer</button>
-        <p class="card__text hidden">
+        <button data-name="toggle-btn" class="button">Show Answer</button>
+        <p data-name="answer-card" class="card__text hidden">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
           Exercitationem non, architecto commodi quod id asper?
         </p>
@@ -195,7 +195,7 @@
       data-name="create"
       class="main-grid--1column hidden"
     >
-      <form class="form" action="">
+      <form data-name="form" class="form" action="">
         <label for="textarea1"
           >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos
           placeat, reiciendis natus dolor!</label

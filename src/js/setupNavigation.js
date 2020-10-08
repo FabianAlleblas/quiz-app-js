@@ -1,4 +1,3 @@
-// IMPORTS
 export default function setupNavigation() {
   const navLinks = document.querySelectorAll('[data-name="navigation"] > *')
   const headings = document.querySelectorAll('[data-name="heading"] > *')
