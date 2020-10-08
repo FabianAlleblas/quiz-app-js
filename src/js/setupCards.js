@@ -27,3 +27,11 @@ function addAnswerLogic(card) {
     answerText.classList.toggle('hidden')
   )
 }
+
+// const bookmarkCardIcon = document.querySelectorAll('[data-name=bookmark-card-icon]')
+
+// bookmarkCardIcon.forEach((item) => {
+//   item.addEventListener('click', () => {
+//     item.classList.toggle('card__bookmark-icon--active')
+//   })
+// })
