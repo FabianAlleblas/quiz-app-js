@@ -24,8 +24,7 @@ export default function setupNavigation() {
     })
 
     navLinks.forEach((navLink) => {
-      // const navName = navLink.dataset.name
-      navLink.classList.toggle(
+        navLink.classList.toggle(
         'navigation__icon--active',
         navLink === clickedLink
       )
