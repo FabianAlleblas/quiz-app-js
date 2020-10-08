@@ -14,7 +14,9 @@ const bookmarkNavIcon = document.querySelector('[data-js=bookmark-navicon]')
 const createNavIcon = document.querySelector('[data-js=create-navicon]')
 const profileNavIcon = document.querySelector('[data-js=profile-navicon]')
 // CARD-BOOKMARK-ICON
-const bookmarkCardIcon = document.querySelector('[data-js=bookmark-cardicon]')
+const bookmarkCardIcon = document.querySelectorAll(
+  '[data-js=bookmark-cardicon]'
+)
 // FORM-BUTTON
 const resetButton = document.querySelector('[data-js=reset-btn]')
 // ANSWER-TOGGLE
@@ -45,9 +47,15 @@ profileNavIcon.addEventListener('click', () => {
   activateIcon(profileNavIcon)
 })
 
-bookmarkCardIcon.addEventListener('click', () =>
-  bookmarkCardIcon.classList.toggle('card__bookmark-icon--active')
-)
+//bookmarkCardIcon.addEventListener('click', () =>
+//  bookmarkCardIcon.classList.toggle('card__bookmark-icon--active')
+//)
+
+bookmarkCardIcon.forEach((item) => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('card__bookmark-icon--active')
+  })
+})
 
 resetButton.addEventListener('click', () =>
   document.querySelector('.form').reset()
