@@ -1,27 +1,29 @@
+// IMPORTS
+import { getDataName } from './lib'
 //HEADINGS
-const questionHeading = getModule('question-heading')
-const bookmarkHeading = getModule('bookmark-heading')
-const createHeading = getModule('create-heading')
-const profileHeading = getModule('profile-heading')
+const questionHeading = getDataName('question-heading')
+const bookmarkHeading = getDataName('bookmark-heading')
+const createHeading = getDataName('create-heading')
+const profileHeading = getDataName('profile-heading')
 //CONTENTBOX
-const questionContent = getModule('question-content')
-const bookmarkContent = getModule('bookmark-content')
-const createContent = getModule('create-content')
-const profileContent = getModule('profile-content')
+const questionContent = getDataName('question-content')
+const bookmarkContent = getDataName('bookmark-content')
+const createContent = getDataName('create-content')
+const profileContent = getDataName('profile-content')
 // NAV-ICONS
-const questionNavIcon = getModule('question-navicon')
-const bookmarkNavIcon = getModule('bookmark-navicon')
-const createNavIcon = getModule('create-navicon')
-const profileNavIcon = getModule('profile-navicon')
+const questionNavIcon = getDataName('question-nav-icon')
+const bookmarkNavIcon = getDataName('bookmark-nav-icon')
+const createNavIcon = getDataName('create-nav-icon')
+const profileNavIcon = getDataName('profile-nav-icon')
 // CARD-BOOKMARK-ICON
 const bookmarkCardIcon = document.querySelectorAll(
-  '[data-js=bookmark-cardicon]'
+  '[data-name=bookmark-card-icon]'
 )
 // FORM-BUTTON
-const resetButton = getModule('reset-btn')
+const resetButton = getDataName('reset-btn')
 // ANSWER-TOGGLE
-const toggleButton = getModule('toggle-btn')
-const answerCard = getModule('answer-card')
+const toggleButton = getDataName('toggle-btn')
+const answerCard = getDataName('answer-card')
 // EVENT-LISTENER
 questionNavIcon.addEventListener('click', () => {
   hideAllPages()
@@ -65,10 +67,6 @@ toggleButton.addEventListener('click', () =>
   answerCard.classList.toggle('hidden')
 )
 // FUNCTIONS
-function getModule(name) {
-  const selector = `[data-js=${name}]`
-  return document.querySelector(selector)
-}
 
 function hideAllPages() {
   questionHeading.classList.add('hidden')
@@ -93,3 +91,30 @@ function showContent(heading, content) {
 function activateIcon(icon) {
   icon.classList.add('navigation__icon--active')
 }
+
+// console.clear()
+
+// const pages = document.querySelectorAll('[data-js="pages"] > *')
+// const navLinks = document.querySelectorAll('[data-js="nav"] > *')
+
+// navLinks.forEach(addNavigationLogic)
+
+// function addNavigationLogic(navLink) {
+//   navLink.addEventListener('click', updateNavigation)
+// }
+
+// function updateNavigation(event) {
+//   event.preventDefault()
+
+//   const clickedLink = event.target
+//   const targetPageName = clickedLink.dataset.name
+
+//   pages.forEach(page => {
+//      const pageName = page.dataset.name
+//      page.classList.toggle('hidden', pageName !== targetPageName)
+//   })
+
+//   navLinks.forEach(navLink => {
+//     navLink.classList.toggle('active', navLink === clickedLink)
+//   })
+// }
