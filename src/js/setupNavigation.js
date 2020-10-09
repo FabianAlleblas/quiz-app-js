@@ -1,6 +1,6 @@
 export default function setupNavigation() {
   const navLinks = document.querySelectorAll('[data-name="navigation"] > *')
-  const headings = document.querySelectorAll('[data-name="heading"] > *')
+  const heading = document.querySelector('[data-name="heading"]')
   const pages = document.querySelectorAll('[data-js="content"]')
 
   navLinks.forEach(addNavigationLogic)
@@ -13,14 +13,14 @@ export default function setupNavigation() {
     const clickedLink = event.currentTarget
     const targetPageName = clickedLink.dataset.name
 
+      targetPageName === 'bookmark' ? heading.textContent = 'Bookmarks' :
+      targetPageName === 'question' ? heading.textContent = 'Quiz App' :
+      targetPageName === 'create' ? heading.textContent = 'Create' : 
+      targetPageName === 'profile' ? heading.textContent = 'Profile' : ''
+
     pages.forEach((page) => {
       const pageName = page.dataset.name
       page.classList.toggle('hidden', pageName !== targetPageName)
-    })
-
-    headings.forEach((heading) => {
-      const headingName = heading.dataset.name
-      heading.classList.toggle('hidden', headingName !== targetPageName)
     })
 
     navLinks.forEach((navLink) => {

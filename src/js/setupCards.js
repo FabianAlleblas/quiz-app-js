@@ -16,7 +16,7 @@ function addBookmarkLogic(card) {
 }
 
 function toggleBookmark(event) {
-  event.target.classList.toggle('card__bookmark-icon--active')
+  event.currentTarget.classList.toggle('card__bookmark-icon--active')
 }
 
 function addAnswerLogic(card) {
