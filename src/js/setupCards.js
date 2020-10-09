@@ -33,11 +33,3 @@ function addAnswerLogic(card) {
     answerButton.textContent = currentButtonText === 'Show Answer' ? 'Hide Answer' : 'Show Answer'
   }
 }
-
-// const bookmarkCardIcon = document.querySelectorAll('[data-name=bookmark-card-icon]')
-
-// bookmarkCardIcon.forEach((item) => {
-//   item.addEventListener('click', () => {
-//     item.classList.toggle('card__bookmark-icon--active')
-//   })
-// })
