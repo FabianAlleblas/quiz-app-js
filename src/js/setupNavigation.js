@@ -12,12 +12,8 @@ export default function setupNavigation() {
   function updateNavigation(event) {
     const clickedLink = event.currentTarget
     const targetPageName = clickedLink.dataset.name
-
-      targetPageName === 'bookmark' ? heading.textContent = 'Bookmarks' :
-      targetPageName === 'question' ? heading.textContent = 'Quiz App' :
-      targetPageName === 'create' ? heading.textContent = 'Create' : 
-      targetPageName === 'profile' ? heading.textContent = 'Profile' : ''
-
+    toggleHeadings(targetPageName)
+  
     pages.forEach((page) => {
       const pageName = page.dataset.name
       page.classList.toggle('hidden', pageName !== targetPageName)
@@ -29,5 +25,12 @@ export default function setupNavigation() {
         navLink === clickedLink
       )
     })
+  }
+
+  function toggleHeadings(targetPageName){
+    targetPageName === 'bookmark' ? heading.textContent = 'Bookmarks' :
+    targetPageName === 'question' ? heading.textContent = 'Quiz App' :
+    targetPageName === 'create' ? heading.textContent = 'Create' : 
+    targetPageName === 'profile' ? heading.textContent = 'Profile' : ''
   }
 }

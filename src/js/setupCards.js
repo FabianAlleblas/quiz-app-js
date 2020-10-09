@@ -27,9 +27,9 @@ function addAnswerLogic(card) {
     toggleAnswerButton(answerButton)
     answerText.classList.toggle('hidden')
   })
+}
 
-  function toggleAnswerButton(answerButton){
-    const currentButtonText = answerButton.textContent.trim()
-    answerButton.textContent = currentButtonText === 'Show Answer' ? 'Hide Answer' : 'Show Answer'
-  }
+function toggleAnswerButton(answerButton){
+  const currentButtonText = answerButton.textContent.trim()
+  answerButton.textContent = currentButtonText === 'Show Answer' ? 'Hide Answer' : 'Show Answer'
 }
