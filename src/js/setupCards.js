@@ -21,14 +21,17 @@ function toggleBookmark(event) {
 
 function addAnswerLogic(card) {
   const answerText = card.querySelector('[data-name="answer-card"')
-  const showAnswerButton = card.querySelector('[data-name="toggle-btn"]')
+  const answerButton = card.querySelector('[data-name="toggle-btn"]')
 
-  showAnswerButton.addEventListener('click', () => {
-    const currentButtonText = showAnswerButton.textContent.trim()
-
+  answerButton.addEventListener('click', () => {
+    toggleAnswerButton(answerButton)
     answerText.classList.toggle('hidden')
-    showAnswerButton.textContent = currentButtonText === 'Show Answer' ? 'Hide Answer' : 'Show Answer'
   })
+
+  function toggleAnswerButton(answerButton){
+    const currentButtonText = answerButton.textContent.trim()
+    answerButton.textContent = currentButtonText === 'Show Answer' ? 'Hide Answer' : 'Show Answer'
+  }
 }
 
 // const bookmarkCardIcon = document.querySelectorAll('[data-name=bookmark-card-icon]')
